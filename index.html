@@ -435,6 +435,46 @@ align-items: center;
                 padding: 0;
                 box-sizing: border-box;
             }
+            @media (max-width: 600px) {
+    .countries {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    header ol {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+
+    .bali,
+    .thailand,
+    .amman,
+    .newyork,
+    .maldives,
+    .trabzon {
+        min-height: 220px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
         </style>
 </body>
 </html>
