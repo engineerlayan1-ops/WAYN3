@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <style>
+
+                        .background{
+                    position: fixed;
+                    object-fit: cover;
+                width: 100%;
+                height: 100%;
+                inset:0;
+                z-index: -2;
+            }
+              
+             footer{
+    grid-column: 1/4;
+    grid-row:4;
+    background-color: var(--primary-navy);
+    color: var(--secondary-lightblue);
+    width: 100%;
+    padding: 60px 8px 20px;
+    margin-top: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: 2fr repeat(2,1fr);
+    gap: 40px;
+    max-width:1200px ;
+    margin: 0 auto;
+}
+
+
+
+.footer-brand img{
+ width: 100px;
+}
+.footer-brand h2{
+   color: var(--secondary-White);
+    font-weight: bold;
+    font-size:24px;
+    user-select: none;
+    margin-bottom: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.footer-brand span{
+    color:var(--secondary-lightblue);
+}
+.footer-brand p{
+    font-size: 14px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--secondary-teal);
+    margin-bottom: 10px;
+
+}
+.footer-column hr{
+    width:50px ;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    height: 2px;
+    background-color: #EAF6F6;
+    border: 1px solid var(--secondary-Aqua);
+}
+.footer-column h3{
+    margin-bottom: 10px;
+    
+ 
+}
+.footer-column ul{
+    list-style: none;
+
+}
+:root{
+    --primary-navy:#0B2545;
+    --secondary-teal:#147D92;
+    --secondary-Aqua:#58C4C6;
+    --secondary-lightblue:#EAF6F6;
+    --secondary-White:#FFFFFF;
+                    --primary-color:#d2bdf4;
+
+   
+}
+.footer-column li{
+    margin-bottom: 5px;
+    color: #147D92;
+   
+}
+.footer-column ul li a{
+    color: var(--secondary-teal);
+      text-decoration: none;
+    transition: color 0.3s ease;
+    
+}
+.footer-bottom {
+    text-align: center;
+    width: 100%;
+    grid-column: 1/-1;
+    padding: 10px 0;
+}
+.footer-bottom hr{
+margin-bottom: 10px;
+}
+.footer-bottom{
+    font-size: 14px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+                
+                header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ grid-row: 1;
+    grid-column: 1/4;
+}
+.header1{
+padding: 0px 20px;
+gap:5px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-radius: 5px;
+flex-wrap: wrap;
+position:sticky;
+top:0;
+align-items: center;
+ color: white;
+    user-select: none;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.ol{
+    display: flex;
+    list-style: none;
+    gap:10px;
+    margin-right: 25px;
+}
+.ol li {
+    list-style: none;
+    margin: 3px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.ol li a {
+    display: block;
+    padding: 8px 12px;
+    color: var(--secondary-lightblue);
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.ol li a:hover {
+    background-color: white;
+    color: var(--primary-navy);
+    border: 2px solid var(--primary-color);
+}
+.container{
+    display:grid;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 100px 1fr 1fr auto;
+}
+nav{
+    grid-row: 3;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+    gap:30px;
+}
+main{
+    display: grid;
+    grid-row: 2;
+    grid-column: 2/3;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 100px 1fr;
+gap: 20px;
+margin-bottom: 20px;}
+.steps-container{
+    display: grid;
+    grid-column: 2/4;
+    grid-template-rows:  1fr 1fr ;
+    grid-template-columns: repeat(2,1fr);
+gap:7px;
+justify-content: center;
+}
+.steps-card{
+    display: flex;
+    color:white;
+       background: transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    font-size: small;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    box-sizing: border-box;
+    transition: 0.23s;
+}
+.steps-card:hover{
+        transform: translateY(-5px);
+
+}
+.steps-card img{
+    display: block;
+    margin: 0 auto;
+}
+ .title{
+    grid-column: 1/5;
+    text-align: center;
+    color:#0B2545;
+ }
+ .steps{
+    color:white;
+    text-align: center;
+    font-size: smaller;
+ }
+ html{
+    scroll-behavior:smooth ;
+
+ }
+  ol li a.active{
+    background-color:white;
+    color: var(--primary-navy);
+    border: 2px solid var white;
+}
+*{
+    box-sizing: border-box;
+    
+}
+            </style>
+
+    </head>
+    <body>
+        <div class="background">
+            <img src="12.jpeg" width="100%" height="100%">
+        </div>
+        <div class="container">
+          <header>
+                <div class="header1"> <img src="wayn-icon.png" width="50" height="50">
+                <h2>WAYN</h2>
+                <h4>travel&adventure </h4>
+            <h4>&reg</h4></div>
+
+                <ol class="ol">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="project.html" >Destinations</a></li>
+                    <li><a href="tips.html"class="active">Travel Tips</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                </ol>
+            </header>
+            <main>
+                <div class="title">
+                    <h1>Our Top Travel Tips</h1> </div>
+               
+  <div class="steps-container">
+<div class="steps-card">
+    <img src="passport-alt-svgrepo-com.svg" width="50px" height="50px">
+    <div class="instruction"> <h2 >Official documents</h2>
+    <p>Prepare your passport and required visas</p></div>
+   
+</div>
+<div class="steps-card">
+    <img src="luggage-travel-svgrepo-com.svg" width="50px" height="50px">
+   <div><h2>Travel preparation</h2>
+    <p>Prepare everything days before your trip</p>
+</div></div> 
+<div class="steps-card">
+    <img src="plane-svgrepo-com.svg" width="50px" height="50px">
+    <div><h2>Airport procedures</h2>
+    <p>Arrive early at the airport on the day of travel</p></div>
+</div>
+  
+   <div class="steps-card">
+    <img src="debit-purchase-svgrepo-com.svg" width="50px" height="50px"><div>
+ <h2>Managing your money</h2>
+ <p>Open an international bank account.</p>
+  </div></div>
+ 
+  </div>
+            </main>
+            
+            <nav>
+                 <div class="steps">
+    <img src="emergency-call-svgrepo-com.svg" width="50px" height="50px">
+ <h3>Know the emergency services phone number</h3>
+  </div>
+  <div class="steps">
+    <img src="suitcase-svgrepo-com.svg" width="50px" height="50px">
+ <h3>Using the appropriate bag</h3>
+  </div>
+  <div class="steps">
+    <img src="recreationalvehicle-svgrepo-com.svg" width="50px" height="50px">
+ <h3>Using reputable moving companies</h3>
+  </div>
+            </nav>
+               <footer>
+        <div class="footer-container">
+                
+              
+              <div class="footer-brand"> 
+               <!-- <img src="images/wayn-icon.png" alt="icon">  -->
+               <h2>WAYN<span style="font-size: 14px;">travel&adventure &reg;</span></h2>
+                <p>adventure platform designed to help users discover new destinations, explore exciting activities, and plan their trips with ease. Whether you're looking for hidden gems, unforgettable experiences, or your next adventure, WAYN helps you find your way to new places.</p>
+            
+             <div class="social-links">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="#EAF6F6">
+                        <path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.3-1.5 1.6-1.5h1.6V3.7c-.8-.1-1.7-.2-2.6-.2-2.6 0-4.4 1.6-4.4 4.5v1.9H7V13h2.7v8z"/>
+                         </svg></a> 
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#EAF6F6" stroke-width="1.8">
+                          <rect x="3" y="3" width="18" height="18" rx="5"/>
+                               <circle cx="12" cy="12" r="4"/>
+                                <circle cx="18" cy="6" r="1" fill="#EAF6F6"/>
+                                       </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="#EAF6F6">
+                          <path d="M5.2 3a2.2 2.2 0 1 0 0 4.4 2.2 2.2 0 0 0 0-4.4zM3.3 9h3.8v12H3.3zM9.5 9h3.6v1.6h.1A4 4 0 0 1 16.8 8c3.8 0 4.5 2.5 4.5 5.7V21h-3.8v-6.5c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H9.5z"/>
+                              </svg></a>
+            </div>
+             </div>
+             <div class="footer-column">
+                <h3>Quick Links</h3>
+                <hr>
+                <ul>
+            <li><a href="Home" >Home</a></li>
+            <li><a href="Destination.html">Destination</a></li>
+            <li><a href="Destination-Details.html">Destination Details</a></li>
+            <li><a href="Travel-Tips.html">Travel Tips</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="Hotels.html">Hotels</a></li>
+                </ul>
+             </div>
+             <div class="footer-column">
+                <ul>
+                <h3>Contact Us</h3>
+                <hr>
+                <li><a href="mailto:Wayn@gmail.com">Wayn@gmail.com</a></li>
+                <li><a href="tel:+96255891060">+96255891060</a></li>
+                <li><a href="/">Wayn.com</a></li>
+                <li>Amman, Jordan</li></ul>
+             </div>
+             
+             <div class="footer-bottom">
+                <hr>
+                <p>&copy; WAYN<span style="font-size: 12px;">travel&adventure</span> All rights reserved.</p>
+             </div>
+        </div>
+    </footer>
+            </div>
+          <style>
+            ::before,
+::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-navy:#0B2545;
+    --secondary-teal:#147D92;
+    --secondary-Aqua:#58C4C6;
+    --secondary-lightblue:#EAF6F6;
+    --secondary-White:#FFFFFF;
+   
+}
+.dashboard{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 90px 1fr auto;
+    grid-template-areas:  
+    "header "
+    "main "
+    "footer";
+}
+.background{
+    position: fixed;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    inset: 0;
+}
+/* -----header----- */
+.dashboard .header{
+grid-area:header;
+padding: 0px 40px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-radius: 5px;
+flex-wrap: wrap;
+position:sticky;
+top:0;
+z-index: 100;
+background:rbga(255,255,255,0.12);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border-bottom: 1px solid rgba(255,255,255,0.12) ;
+}
+/* ----logo--- */
+.dashboard .header .logo{
+    display: flex;
+    align-items: center;
+    gap:12px;
+}  
+
+.dashboard .header .logo .brand{
+    color: var(--secondary-White);
+    font-weight: bold;
+    font-size:22px;
+    user-select: none;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.dashboard .header .logo .tagline{
+
+ color:var(--secondary-lightblue);
+ font-size: 15px;
+}
+.dashboard .header .logo img{
+    width: 50px;
+}
+/* -----nav----- */
+.dashboard .header nav{
+    display: flex;
+    gap:8px;
+    align-items: center;
+    user-select: none;
+    
+  
+}
+.dashboard .header nav a{
+    background-color: transparent;
+    color:var(--secondary-White);
+    border-radius: 10px;
+     text-decoration: none;
+     padding: 8px 14px;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+.dashboard .header nav a:hover{
+    background-color: var(--secondary-White);
+    color: var(--primary-navy);
+    border: none;
+    transform:translateY(-2px);
+   
+}
+.dashboard .header nav a.active{
+    background-color: var(--secondary-White);
+    color: var(--primary-navy);
+    border: none;
+}
+/* ----hero---- */
+.contact-hero{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 100px;
+    padding: 100px;
+    justify-content: center;
+    text-align: center;
+   
+
+}
+.contact-hero h2{
+    color: var(--primary-navy);
+    font-size: 52px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 0 2px 12px rgba(255,255,255,0.45) ;
+}
+.contact-hero p{
+    color: var(--secondary-lightblue);
+    font-size: 18px;
+    line-height: 1.6;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.45);
+    margin-bottom: 40px;
+}
+/* ----contact boxes */
+.contact-boxes 
+{ display: grid; 
+    grid-template-columns: 1fr 1fr;
+     gap: 30px;
+     max-width: 1000px;
+     align-items: stretch;
+     margin: 0 auto;
+ }
+.contact-box {
+  flex: 1 1 400px;
+  width: 450px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 28px;
+  border-radius: 20px;
+  background:transparent;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.2);
+  transition: 0.3s;
+}
+.contact-box:hover{
+    transform: translateY(-5px);
+}
+.contact-box h3{ 
+    margin: 0 0 16px;
+    font-size: 24px;
+    color: var(--primary-navy);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* -----box1---- */
+.contact-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  padding: 0px 20px;
+  gap: 18px;
+    
+}
+.contact-list li{
+    display: flex;
+    align-items: center;
+    gap:14px;
+    color: var(--secondary-lightblue);
+    text-align: left;
+}
+.contact-list svg{
+    width: 40px;
+    height: 40ps;
+    padding: 9px;
+    border-radius: 50%;
+    background-color: var(--primary-navy);
+    border: none;
+    color: var(--secondary-lightblue);
+}
+.contact-list li a{
+    text-decoration: none;
+    color:var(--secondary-lightblue);
+    transition: 0.3s;
+    font-size: 18px;
+}
+.contact-list li a:hover{
+    color:var(--primary-navy)
+}
+/* -----box2---- */
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--secondary-lightblue);
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  resize: none;
+
+}
+.contact-box input::placeholder,
+.contact-box textarea::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+.contact-box button{
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--secondary-lightblue);
+    background-color: var(--primary-navy);
+    transition: 0.5s;
+}
+.contact-box button:hover,
+.contact-box button:focus{
+   background-color: rgba(255,255,255,0.4);
+    color:var(--primary-navy);
+    border: 1px solid var(--primary-navy);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* -----footer----- */
+footer{
+    grid-area: footer;
+    background: var(--primary-navy);
+    color: var(--secondary-lightblue);
+    width: 100%;
+    padding: 60px 8px 20px;
+    margin-top: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: 2fr repeat(2,1fr);
+    gap: 40px;
+    max-width:1200px ;
+    margin: 0 auto;
+}
+.footer-brand img{
+ width: 100px;
+}
+.footer-brand h2{
+   color: var(--secondary-White);
+    font-weight: bold;
+    font-size:24px;
+    user-select: none;
+    margin-bottom: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.footer-brand span{
+    color:var(--secondary-lightblue);
+}
+.footer-brand p{
+    font-size: 14px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--secondary-teal);
+    margin-bottom: 10px;
+
+}
+.footer-column hr{
+    width:50px ;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    height: 2px;
+    background-color: #EAF6F6;
+    border: 1px solid var(--secondary-Aqua);
+}
+.footer-column h3{
+    margin-bottom: 10px;
+    
+ 
+}
+.footer-column ul{
+    list-style: none;
+
+}
+.footer-column li{
+    margin-bottom: 5px;
+    color: var(--secondary-teal);
+   
+}
+.footer-column ul li a{
+    color: var(--secondary-teal);
+      text-decoration: none;
+    transition: color 0.3s ease;
+    
+}
+.footer-bottom {
+    text-align: center;
+    width: 100%;
+    grid-column: 1/-1;
+    padding: 10px 0;
+}
+.footer-bottom hr{
+margin-bottom: 10px;
+}
+.footer-bottom{
+    font-size: 14px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+          </style>
+    </body>
+</html>
