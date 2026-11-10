@@ -14,8 +14,8 @@
                 <h4>travel&adventure </h4>
             <h4>&reg</h4></div>
                 <ol class="ol">
-                    <li><a href="project.html">Home</a></li>
-                    <li><a href="index.html">Destinations</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="project.html">Destinations</a></li>
                     <li><a href="tips.html">Travel Tips</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="hotels.html" class="active">Hotels</a></li>
@@ -444,6 +444,46 @@ margin-top: 20px;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+        @media (max-width: 600px) {
+    .countries {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    header ol {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+
+    .bali,
+    .thailand,
+    .amman,
+    .newyork,
+    .maldives,
+    .trabzon {
+        min-height: 220px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
     </style>
 </body>
