@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WAYN-travel&adventure</title>
-    <link rel="icon" href="images/wayn-icon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="wayn-icon.png">
 </head>
 <body>
     <div class="dashboard">
         
-           <div class="background"><img src="images/background.jpeg" width="100% " height="100%" alt="background"> </div>
+           <div class="background"><img src="bali/12.jpeg" width="100% " height="100%" alt="background"> </div>
     <header class="header">
         <div class="logo">
-            <img src="images/wayn-icon.png" alt="wayn-icon">
+            <img src="wayn-icon.png" alt="wayn-icon">
             <div class="logo-">
                 <span class="brand">WAYN</span>
                 <span class="tagline">travel&adventure &reg;</span>
             </div>
         </div>
         <nav>
-            <a href="project.html" class="active">Home</a>
-            <a href="index.html">Destination</a>
-            <a href="tips.html">Travel Tips</a>
-            <a href="contact.html">Contact</a>
-             <a href="hotels.html">Hotels</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="Destination.html">Destination</a>
+            <a href="Destination-Details.html">Destination Details</a>
+            <a href="Travel-Tips.html">Travel Tips</a>
+            <a href="Contact.html">Contact</a>
+             <a href="Hotels.html">Hotels</a>
         </nav>
     </header>
     <main>
@@ -41,7 +41,7 @@
         <!-- Destination section -->
          
         <div class="cards">
-          <a href="Destination.html" class="cards-title">
+          <a href="index.html" class="cards-title">
         Trending Destination</a>
         <div class="card">
             <img src="amman1.jpg" alt="Amman" >
@@ -119,12 +119,11 @@
                 <h3>Quick Links</h3>
                 <hr>
                 <ul>
-            <li><a href="index.html" >Home</a></li>
-            <li><a href="Destination.html">Destination</a></li>
-            <li><a href="Destination-Details.html">Destination Details</a></li>
-            <li><a href="Travel-Tips.html">Travel Tips</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-            <li><a href="Hotels.html">Hotels</a></li>
+            <li><a href="home.html" >Home</a></li>
+            <li><a href="index.html">Destination</a></li>
+            <li><a href="tips.html">Travel Tips</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="hotels.html">Hotels</a></li>
                 </ul>
              </div>
              <div class="footer-column">
@@ -145,7 +144,10 @@
     </footer>
     
    </div>
-   *{
+   <style>
+  *,
+::before,
+::after{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -160,17 +162,25 @@
 }
 .dashboard{
     display: grid;
-    grid-template-columns:250px 1fr ;
-    grid-template-rows: 100px 1fr 60px;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 90px 1fr 60px;
     grid-template-areas:  
-    "header header"
-    "main main "
-    "footer footer";
+    "header "
+    "main "
+    "footer";
 }
+.background{
+    position: fixed;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    inset: 0;
+}
+/* -----header----- */
 .dashboard .header{
 grid-area:header;
-background-color: var(--secondary-lightblue);
-padding: 0px 20px;
+padding: 0px 40px;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -178,9 +188,13 @@ border-radius: 5px;
 flex-wrap: wrap;
 position:sticky;
 top:0;
-z-index: 999;
-border-bottom:1px solid var(--secondary-White);
+z-index: 100;
+background:rbga(255,255,255,0.12);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border-bottom: 1px solid rgba(255,255,255,0.12) ;
 }
+/* ----logo--- */
 .dashboard .header .logo{
     display: flex;
     align-items: center;
@@ -188,53 +202,223 @@ border-bottom:1px solid var(--secondary-White);
 }  
 
 .dashboard .header .logo .brand{
-    color: var(--primary-navy);
+    color: var(--secondary-White);
     font-weight: bold;
-    font-size:24px;
+    font-size:22px;
     user-select: none;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 .dashboard .header .logo .tagline{
 
- color:var(--secondary-teal);
+ color:var(--secondary-lightblue);
+ font-size: 15px;
 }
 .dashboard .header .logo img{
-    width: 70px;
+    width: 50px;
 }
+/* -----nav----- */
 .dashboard .header nav{
     display: flex;
-    gap:10px;
+    gap:8px;
     align-items: center;
     user-select: none;
-    margin-right: 40px;
+    
   
 }
 .dashboard .header nav a{
-    background-color: var(--primary-navy);
-    color:var(--secondary-lightblue);
+    background-color: transparent;
+    color:var(--secondary-White);
     border-radius: 10px;
      text-decoration: none;
-     padding: 5px;
-     margin: 3px;
+     padding: 8px 14px;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    white-space: nowrap;
     transition: 0.3s;
 }
 .dashboard .header nav a:hover{
     background-color: var(--secondary-White);
     color: var(--primary-navy);
-    border: 1px solid var(--primary-navy);
+    border: none;
     transform:translateY(-2px);
    
 }
 .dashboard .header nav a.active{
     background-color: var(--secondary-White);
     color: var(--primary-navy);
+    border: none;
+}
+/* ----main----- */
+.dashboard main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+/* -----hero----- */
+.dashboard main .hero{
+    display: flex;
+    flex-direction: column;     
+    align-items: center;
+    text-align: center;
+    margin-top: 90px;
+    gap: 28px;
+    max-width: 700px;
+    color: var(--secondary-white);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.dashboard main .hero .about-as h1{
+    color: var(--primary-navy);
+    font-size: 52px;
+    text-shadow: 0 2px 12px rgba(255,255,255,0.45) ;
+    
+}
+.dashboard main .hero .about-as p{
+    color: var(--secondary-lightblue);
+    font-size: 19px;
+    line-height: 1.6;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.45);
+}
+/* ------auth-box---- */
+.dashboard main .hero .auth-box{
+    display: flex;
+    gap: 10px;
+    
+}
+.dashboard main .hero .auth-box a{
+    
+    background: transparent;
+    backdrop-filter: blur(5px);
+    color: var(--primary-navy);
+    border-radius: 10px;
+    padding: 5px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
     border: 1px solid var(--primary-navy);
+    transition: 0.3s;
+
+}
+.dashboard main .hero .auth-box a:focus,
+.dashboard main .hero .auth-box a:hover
+{
+   
+    background-color: rgba(255,255,255,0.6);
+    color: var(--primary-navy);
+    border: 1px solid var(--primary-navy);
+    transform: translatey(-2px);
+}
+/* ----cards----- */
+.dashboard main .cards{
+    margin:100px auto 0 ;
+    background:transparent;
+    backdrop-filter: blur(20px);
+    /* background: rgba(11,37,69,0.35);
+    backdrop-filter: blur(14px); */
+    border: 1px solid rgba(255,255,255,0.2);
+    width: 100%;
+    padding: 20px 50px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 17px;
+}
+.dashboard main .cards .cards-title{
+    width: 100%;
+    color: var(--secondary-lightblue);
+    text-decoration: none;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 22px;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.7);
+}
+.dashboard main .cards .card{
+        position: relative;
+}
+.dashboard main .cards .card .name{
+    position: absolute;
+    top:0;
+    left:0;
+    padding: 5px 8px;
+    font-weight: bold;
+    color: var(--secondary-lightblue);
+     text-shadow: 0 1px 6px rgba(0,0,0,0.7);
+     pointer-events: none;
+}
+.dashboard main .cards .card img{
+    width: 200px;
+    height: 140px;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor:pointer;
+}
+.dashboard main .cards img:hover{
+    transform: scale(1.1);
 }
 
-/* -----footer----- */
-footer{
+
+
+/* -----Q&A---- */
+.dashboard main .Q-A{
+   margin: 100px auto 0;
+   width: 90%;
+   box-sizing: border-box;
+   background:transparent;
+   backdrop-filter: blur(10px);
+    border:1px solid rgba(255,255,255,0.2);
+   box-shadow: 0 8px 32px  rgba(0,0,0,0.2);
+   border-radius: 20px;
+   
+   padding: 20px 80px;
+    
+}
+.dashboard main .Q-A h2{
+    color: var(--secondary-lightblue);
+     text-shadow: 0 2px 6px rgba(0,0,0,0.5) ;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* -webkit-text-stroke: 0.2px var(--secondary-lightblue); */
+    text-align:left;
+    margin-bottom: 6px;
+}
+.dashboard main .Q-A .details{
+    background-color: rgba(255,255,255,0.4);
+    color: var(--primary-navy);
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.dashboard main .Q-A .details p{
+    line-height: 1.6;
+    font-size: 15px;
+    padding: 10px 20px 15px;
+    margin: 0;
+    
+}
+    
+.dashboard main .Q-A .details:hover{
+ background: rgba(255,255,255,0.45);
+ transform: translateY(-2px);
+ box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+/* ---footer */
+ footer{
     grid-area: footer;
     background: var(--primary-navy);
+    /* background:transparent;
+   backdrop-filter: blur(10px);
+    border:1px solid rgba(255,255,255,0.2); */
     color: var(--secondary-lightblue);
     width: 100%;
     padding: 60px 8px 20px;
@@ -248,6 +432,9 @@ footer{
     max-width:1200px ;
     margin: 0 auto;
 }
+
+
+
 .footer-brand img{
  width: 100px;
 }
@@ -311,7 +498,6 @@ margin-bottom: 10px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-        </style>
- 
+   </style>
 </body>
 </html>
