@@ -426,6 +426,50 @@ margin-bottom: 10px;
     font-size: 14px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+    @media (max-width: 600px) {
+    .dashboard .header {
+        height: auto;
+        padding: 12px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .dashboard .header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .dashboard .header nav a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .contact-hero {
+        margin: 20px 12px;
+        padding: 30px 12px;
+    }
+
+    .contact-hero h2 {
+        font-size: 36px;
+    }
+
+    .contact-boxes {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 16px;
+    }
+
+    .contact-box {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
 
         </style>
 </body>
